@@ -118,10 +118,6 @@ public class Algebra {
 	// Returns the integer part of x1 / x2 
 	public static int div(int x1, int x2) {
 		// Replace the following statement with your code
-		if(x2 == 0){
-			System.out.print("You can't do that!!! try number other than ");
-			return 0;
-		}
 
 		int num = 0;
 		int count = 0;
@@ -179,11 +175,7 @@ public class Algebra {
 	// Returns x1 % x2
 	public static int mod(int x1, int x2) {
 		
-		if(x2 == 0){
-			System.out.println("Error, try something other than ");
-			return 0;
-		}
-		else if(x1 < x2){
+		if(x1 < x2){
 			return x1;
 		}
 		else if(x2 == x1){
