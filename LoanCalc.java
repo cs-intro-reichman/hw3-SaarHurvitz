@@ -30,7 +30,6 @@ public class LoanCalc {
 	private static double endBalance(double loan, double rate, int n, double payment) {	
 		double sum = (loan - payment) * rate;
 		for(int i = 0; i < n - 1; i++){
-			System.out.println(sum);
 			sum = (sum - payment) * rate;
 		}
 		return sum;
@@ -69,7 +68,6 @@ public class LoanCalc {
 		double sum = (loan - L) * rate;
 		double H = sum;
 		double between = 0;
-		//double g = (L + H) / 2.0;
 		while (Math.abs(sum) >= epsilon) {
 		
 		for(int i = 0; i < n - 1; i++){
