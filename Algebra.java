@@ -205,8 +205,7 @@ public class Algebra {
 	// Returns the integer part of sqrt(x) 
 	public static int sqrt(int x) {
 		// Replace the following statement with your code
-		int num = 0;
-		int epsilon = 1;	
+		int num = 0;	
 		while (minus(times(num, num), x) < 0) {
 			num++;
 		}
