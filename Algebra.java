@@ -23,7 +23,7 @@ public class Algebra {
    		//System.out.println(mod(120,6));  // 120 % 6    
    		
    		System.out.println(sqrt(10));
-		System.out.println(Math.sqrt(10));
+		System.out.println((int)Math.sqrt(10));
 	}  
 
 	// Returns x1 + x2
@@ -205,10 +205,18 @@ public class Algebra {
 	// Returns the integer part of sqrt(x) 
 	public static int sqrt(int x) {
 		// Replace the following statement with your code
-		int num = 1;
-		
+		int num = 0;
+		int epsilon = 1;	
 		while (minus(times(num, num), x) < 0) {
 			num++;
+		}
+		//creates integer of the current sum and the previous sum
+		int num2 = minus(num, 1);
+		int num3 = times(minus(times(num2, num2), x),-1);
+		int num4 = minus(times(num, num), x);
+		//checking what's closer to sqrt on int values
+		if(num3 <= num4){
+			num--;
 		}
 		return num;
 	}	  	  
