@@ -12,7 +12,8 @@ public class Algebra {
  		//System.out.println(times(-5,-1));  // 3 * 4
    		//System.out.println(plus(2,times(4,2)));  // 2 + 4 * 2
    		//System.out.println(pow(5,3));      // 5^3
-   		//System.out.println(pow(3,5));      // 3^5
+   		//System.out.println(pow(3,5)); 
+		//System.out.println((int)1/5);     // 3^5
    		//System.out.println(div(12,0));   // 12 / 3    
    		//System.out.println(div(5,5));    // 5 / 5  
    		//System.out.println(div(26,-5));    // 25 / 7
@@ -22,8 +23,8 @@ public class Algebra {
 		//System.out.println(1%5);  // 25 % 7
    		//System.out.println(mod(120,6));  // 120 % 6    
    		
-   		System.out.println(sqrt(10));
-		System.out.println((int)Math.sqrt(10));
+   	//	System.out.println(sqrt(10));
+	//	System.out.println((int)Math.sqrt(10));
 	}  
 
 	// Returns x1 + x2
@@ -111,8 +112,22 @@ public class Algebra {
 
 	// Returns x^n (for n >= 0)
 	public static int pow(int x, int n) {
-		// Replace the following statement with your code
-		return 0;
+
+		if(n == 1){
+			return x;
+		}
+		else if(n == 0){
+			return 1;
+		}
+        //Since lower than zero will always give 1/x the on integer value it will always be zero
+		else if(n < 0){
+			return 0;
+		}
+		int num = x;
+		for(int i = 2; i <= n; i++){
+			x = times(x, num);
+		}
+		return x;
 	}
 
 	// Returns the integer part of x1 / x2 
