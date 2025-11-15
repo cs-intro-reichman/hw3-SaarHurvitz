@@ -11,8 +11,8 @@ public class Algebra {
    		//System.out.println(minus(2,0));  // 2 - 7
  		//System.out.println(times(-5,-1));  // 3 * 4
    		//System.out.println(plus(2,times(4,2)));  // 2 + 4 * 2
-   		//System.out.println(pow(5,3));      // 5^3
-   		//System.out.println(pow(3,5)); 
+   		//System.out.println(pow(5,0));      // 5^3
+   		//System.out.println(pow(0,5)); 
 		//System.out.println((int)1/5);     // 3^5
    		//System.out.println(div(12,0));   // 12 / 3    
    		//System.out.println(div(5,5));    // 5 / 5  
@@ -23,7 +23,7 @@ public class Algebra {
 		//System.out.println(1%5);  // 25 % 7
    		//System.out.println(mod(120,6));  // 120 % 6    
    		
-   	//	System.out.println(sqrt(10));
+   		System.out.println(sqrt(24));
 	//	System.out.println((int)Math.sqrt(10));
 	}  
 
@@ -211,19 +211,19 @@ public class Algebra {
 
 	// Returns the integer part of sqrt(x) 
 	public static int sqrt(int x) {
-		// Replace the following statement with your code
+		if(x == 0){
+			return 0;
+		}
 		int num = 0;	
+	
 		while (minus(times(num, num), x) < 0) {
 			num++;
 		}
-		//creates integer of the current sum and the previous sum
-		int num2 = minus(num, 1);
-		int num3 = times(minus(times(num2, num2), x),-1);
-		int num4 = minus(times(num, num), x);
-		//checking what's closer to sqrt on int values
-		if(num3 <= num4){
+		//checking if floor value is needed
+		if(minus(times(num, num), x) == 0){
+				return num;
+			}
 			num--;
-		}
-		return num;
+			return num;
 	}	  	  
 }

@@ -52,12 +52,12 @@ public class Anagram {
 	   
 	// Returns a preprocessed version of the given string: all the letter characters are converted
 	// to lower-case, and all the other characters are deleted, except for spaces, which are left
-	// as is. For example, the string "What? No way!" becomes "whatnoway"
+	// as is. For example, the string "What? No way!" becomes "what no way"
 	public static String preProcess(String str) {
 		char c = ' ';
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < str.length(); i++){
-			if("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".indexOf(str.charAt(i)) != -1){
+			if("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ".indexOf(str.charAt(i)) != -1){
 
 					c = Character.toLowerCase(str.charAt(i));
 					sb.append(c);		
