@@ -119,7 +119,7 @@ public class Algebra {
 		else if(n == 0){
 			return 1;
 		}
-        //Since lower than zero will always give 1/x the on integer value it will always be zero
+        //Since lower than zero will always give 1/x on integer value it will always be zero
 		else if(n < 0){
 			return 0;
 		}
