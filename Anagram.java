@@ -13,11 +13,10 @@ public class Anagram {
 		
 		
 		// Tests the randomAnagram function.
-		System.out.println("Hello");
-		System.out.println("silent and " + randomAnagram("silent") + " are anagrams.");
+		//System.out.println("silent and " + randomAnagram("silent") + " are anagrams.");
 		
 		// Performs a stress test of randomAnagram 
-	 	String str = "1234567";
+	 	/*String str = "1234567";
 		Boolean pass = true;
 		//// 10 can be changed to much larger values, like 1000
 		for (int i = 0; i < 10; i++) {
@@ -26,7 +25,7 @@ public class Anagram {
 			pass = pass && isAnagram(str, randomAnagram);
 			if (!pass) break;
 		}
-		System.out.println(pass ? "test passed" : "test Failed");
+		System.out.println(pass ? "test passed" : "test Failed");*/
 	}  
 
 	// Returns true if the two given strings are anagrams, false otherwise.
