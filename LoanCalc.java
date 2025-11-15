@@ -31,7 +31,6 @@ public class LoanCalc {
 		double sum = loan;
 		for(int i = 0; i < n; i++){
 			sum = (sum - payment) * rate;
-			System.out.println(sum);
 		}
 		return sum;
 	}

@@ -24,9 +24,9 @@
             "request": "launch",
             "mainClass": "LoanCalc",
             "args": [
-                "100000",
-                "1.03",
-                "12"
+                "50000",
+                "1.05",
+                "36"
             ]
         }
     ]
