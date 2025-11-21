@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestAnagram",
+            "request": "launch",
+            "mainClass": "TestAnagram",
+            "projectName": "hw3-SaarHurvitz_b16f2a05"
+        },
+        {
+            "type": "java",
             "name": "TestAlgebra",
             "request": "launch",
             "mainClass": "TestAlgebra",

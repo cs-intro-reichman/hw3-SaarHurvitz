@@ -60,7 +60,7 @@ public class Anagram {
 		char c = ' ';
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < str.length(); i++){
-			if("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ".indexOf(str.charAt(i)) != -1){
+			if("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".indexOf(str.charAt(i)) != -1){
 					c = Character.toLowerCase(str.charAt(i));
 					sb.append(c);		
 
