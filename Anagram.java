@@ -4,14 +4,15 @@ public class Anagram {
 		// Tests the isAnagram function.
 		//System.out.println(preProcess("What? No way!!!y"));
 		
-		/*System.out.println(isAnagram("silent","listen"));  // true
+		System.out.println(isAnagram("silent","listen"));  // true
 		System.out.println(isAnagram("William Shakespeare","I am a weakish speller")); // true
 		System.out.println(isAnagram("Madam Curie","Radium came")); // true
-		System.out.println(isAnagram("Tom Marvolo Riddle","I am Lord Voldemort")); // true*/
+		System.out.println(isAnagram("Tom Marvolo Riddle","I am Lord Voldemort")); // true
 
 		// Tests the preProcess function.
 		
-		
+		String str = "cat";
+		System.out.println(str.length());
 		// Tests the randomAnagram function.
 		//System.out.println("silent and " + randomAnagram("silent") + " are anagrams.");
 		
@@ -31,12 +32,13 @@ public class Anagram {
 	// Returns true if the two given strings are anagrams, false otherwise.
 	public static boolean isAnagram(String str1, String str2) {
 		str1 = preProcess(str1);
+		System.err.println(str1.length());
 		str2 = preProcess(str2);
+		System.err.println(str2.length());
 		int count = 0;
 		int j = 0;
 		 for(int i = 0; i < str1.length(); i++){
 			for(; j < str2.length(); j++){
-
 				if(str1.charAt(i) != str2.charAt(j)){
 					count++;
 				}
@@ -54,11 +56,11 @@ public class Anagram {
 	// to lower-case, and all the other characters are deleted, except for spaces, which are left
 	// as is. For example, the string "What? No way!" becomes "what no way"
 	public static String preProcess(String str) {
+		
 		char c = ' ';
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < str.length(); i++){
 			if("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ".indexOf(str.charAt(i)) != -1){
-
 					c = Character.toLowerCase(str.charAt(i));
 					sb.append(c);		
 

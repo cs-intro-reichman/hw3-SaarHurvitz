@@ -22,8 +22,9 @@ public class Algebra {
 		//System.out.println(-25%-7);     
 		//System.out.println(1%5);  // 25 % 7
    		//System.out.println(mod(120,6));  // 120 % 6    
+		System.out.println(Math.floor(Math.sqrt(24)));
    		
-   		System.out.println(sqrt(24));
+   	//	System.out.println(sqrt(24));
 	//	System.out.println((int)Math.sqrt(10));
 	}  
 
@@ -214,7 +215,7 @@ public class Algebra {
 		if(x == 0){
 			return 0;
 		}
-		int num = 0;	
+		int num = 0;
 	
 		while (minus(times(num, num), x) < 0) {
 			num++;
